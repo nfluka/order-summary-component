@@ -1,0 +1,147 @@
+$color-pale-blue: hsl(225, 100%, 94%);
+$color-bright-blue: hsl(245, 75%, 52%);
+$color-bright-blue-desaturated: hsl(245, 65%, 70%);
+$color-very-pale-blue: hsl(225, 100%, 98%);
+$color-desaturated-blue: hsl(224, 23%, 55%);
+$color-dark-blue: hsl(223, 47%, 23%);
+
+$font-family: 'Red Hat Display', sans-serif;
+$font-size-normal: 1rem;
+$font-weight-500: 500;
+$font-weight-700: 700;
+$font-weight-900: 900;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: $font-family;
+    font-size: $font-size-normal;
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-repeat: repeat-x;
+    background-color: $color-pale-blue;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.order-summary {
+    max-width: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+
+    &__content {
+        padding: 2.5rem;
+    }
+
+    &__title, &__description {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: $font-weight-900;
+        color: $color-dark-blue;
+        padding-bottom: 1rem;
+    }
+
+    &__description {
+        color: $color-desaturated-blue;
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $color-very-pale-blue;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        border-radius: 10px;
+
+        & a:hover {
+            text-decoration: none;
+            color: $color-bright-blue-desaturated;
+        }
+    }
+
+    &__plan-details {
+        align-self: flex-start;
+    }
+
+    &__plan-type {
+        color: $color-dark-blue;
+        font-weight: $font-weight-700;
+    }
+
+    &__plan-price {
+        color: $color-desaturated-blue;
+    }
+
+    & a {
+        color: $color-bright-blue;
+        font-weight: $font-weight-700;
+    }
+
+    &__cta {
+        min-width: 100%;
+        border-radius: 10px;
+        padding: 1rem 0;
+        border: none;
+        font-family: $font-family;
+        font-size: 1rem;
+        font-weight: $font-weight-900;
+        color: $color-pale-blue;
+        background-color: $color-bright-blue;
+        
+        &--secondary {
+            background-color: transparent;
+            color: $color-desaturated-blue;
+            margin-top: 1rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-bright-blue-desaturated;
+        }
+    
+        &--secondary:hover {
+            color: $color-dark-blue;
+            background-color: transparent;
+            box-shadow: none;
+        }
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background-image: url("./images/pattern-background-mobile.svg");
+        background-repeat: repeat-x;
+    }
+
+    .order-summary {
+        min-width: 450px;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

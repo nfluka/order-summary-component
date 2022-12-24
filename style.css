@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: repeat-x;
+  background-color: hsl(225deg, 100%, 94%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+.order-summary {
+  max-width: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+}
+.order-summary__content {
+  padding: 2.5rem;
+}
+.order-summary__title, .order-summary__description {
+  text-align: center;
+}
+.order-summary__title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: hsl(223deg, 47%, 23%);
+  padding-bottom: 1rem;
+}
+.order-summary__description {
+  color: hsl(224deg, 23%, 55%);
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+.order-summary__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(225deg, 100%, 98%);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+}
+.order-summary__price a:hover {
+  text-decoration: none;
+  color: hsl(245deg, 65%, 70%);
+}
+.order-summary__plan-details {
+  align-self: flex-start;
+}
+.order-summary__plan-type {
+  color: hsl(223deg, 47%, 23%);
+  font-weight: 700;
+}
+.order-summary__plan-price {
+  color: hsl(224deg, 23%, 55%);
+}
+.order-summary a {
+  color: hsl(245deg, 75%, 52%);
+  font-weight: 700;
+}
+.order-summary__cta {
+  min-width: 100%;
+  border-radius: 10px;
+  padding: 1rem 0;
+  border: none;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  color: hsl(225deg, 100%, 94%);
+  background-color: hsl(245deg, 75%, 52%);
+}
+.order-summary__cta--secondary {
+  background-color: transparent;
+  color: hsl(224deg, 23%, 55%);
+  margin-top: 1rem;
+}
+.order-summary__cta:hover {
+  cursor: pointer;
+  background-color: hsl(245deg, 65%, 70%);
+}
+.order-summary__cta--secondary:hover {
+  color: hsl(223deg, 47%, 23%);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-repeat: repeat-x;
+  }
+  .order-summary {
+    min-width: 450px;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */
